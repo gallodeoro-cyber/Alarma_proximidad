@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Alarma de Proximidad</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>Sistema de Alarma</h1>
+
+        {% if estado == "ALERTA" %}
+
+            <div class="alerta">
+                ⚠ ALERTA DETECTADA ⚠
+            </div>
+
+        {% else %}
+
+            <div class="normal">
+                ✔ SIN ALERTAS
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
